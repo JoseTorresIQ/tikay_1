@@ -10,19 +10,29 @@
 </head>
 <body>
 
-    <!-- Encabezado / Navegación -->
+    <!-- Encabezado / Navegación (Sincronizado) -->
     <header>
         <a href="index.html" class="brand">
             <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
-        <nav>
+        
+        <!-- Botón de Menú Hamburguesa para celulares -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Quiénes Somos</a></li>
+                
+                <!-- Menú desplegable móvil sincronizado -->
                 <li class="dropdown">
-                    <a href="index.html#servicios" style="color: var(--fucsia);">Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content">
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer; color: var(--fucsia);">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    </a>
+                    <div class="dropdown-content" id="drop-servicios">
                         <a href="psicologia-infantil.html">Psicología Infantil</a>
                         <a href="psicologia-adolescentes.html">Psicología Adolescentes</a>
                         <a href="psicologia-adultos.html">Psicología para Adultos</a>
@@ -32,7 +42,8 @@
                         <a href="neuropsicologia.html">Neuropsicología</a>
                     </div>
                 </li>
-                <li><a href="#contacto">Contacto</a></li>
+                
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -59,7 +70,7 @@
         <div class="panel-icono" style="color: var(--fucsia);"><i class="fas fa-child"></i></div>
         <h1>Psicología Infantil</h1>
         <div class="badges-modalidad" style="margin-bottom: 30px;">
-            <span class="badge badge-presencial">Disponible Presencial</span>
+            <span class="badge badge-presencial">Presencial</span>
         </div>
         
         <p>Los primeros años de vida son fundamentales. En T'ikay, acompañamos a tus pequeños en su desarrollo emocional y social, garantizando un entorno en el que se sientan seguros y validados. Entendemos que cada niño es un universo, por lo que nuestras sesiones son personalizadas y basadas en el respeto.</p>
@@ -114,13 +125,13 @@
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT DEL CARRUSEL -->
+    <!-- SCRIPTS SINCRONIZADOS (Carrusel + Menú Móvil) -->
     <script>
+        // Carrusel
         let slideIndex = 1;
         mostrarSlides(slideIndex);
         function cambiarSlide(n) { mostrarSlides(slideIndex += n); }
@@ -137,6 +148,19 @@
             slides[slideIndex-1].style.display = "block";
             setTimeout(() => { slides[slideIndex-1].classList.add("activo"); }, 50);
         }
+
+        // Menú Móvil
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
     </script>
 </body>
 </html>

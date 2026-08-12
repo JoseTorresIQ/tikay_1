@@ -24,20 +24,29 @@
 </head>
 <body>
 
-    <!-- Encabezado / Navegación -->
-    <header>
+<!-- Encabezado / Navegación Mejorado para Móviles -->
+<header>
         <a href="index.html" class="brand">
-            <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo Centro de Terapia T'ikay Urubamba">
+            <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
-        <nav>
+        
+        <!-- Botón de Menú Hamburguesa para celulares -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Quiénes Somos</a></li>
-                <!-- AQUI EMPIEZA EL DROPDOWN -->
+                
+                <!-- Menú desplegable modificado para no saltar de sección -->
                 <li class="dropdown">
-                    <a href="index.html#servicios" style="cursor: pointer;">Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content">
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer;">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    </a>
+                    <div class="dropdown-content" id="drop-servicios">
                         <a href="psicologia-infantil.html">Psicología Infantil</a>
                         <a href="psicologia-adolescentes.html">Psicología Adolescentes</a>
                         <a href="psicologia-adultos.html">Psicología para Adultos</a>
@@ -47,6 +56,7 @@
                         <a href="neuropsicologia.html">Neuropsicología</a>
                     </div>
                 </li>
+                
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -246,6 +256,9 @@
     </a>
 
     <!-- SCRIPT -->
+
+    <!-- Script para Menú Móvil -->
+
     <script>
         let slideIndex = 1;
         mostrarSlides(slideIndex);
@@ -277,6 +290,19 @@
                 document.getElementById(target).classList.add('activo');
                 boton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             });
+        });
+
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Cambiar el icono de hamburguesa a una 'X' al abrir
+            if (navMenu.classList.contains('active')) {
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
         });
     </script>
 </body>

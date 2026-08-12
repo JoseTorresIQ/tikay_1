@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
     <title>Quiénes Somos - Centro T'ikay Urubamba</title>
     <meta name="description" content="Conoce la historia, misión y visión del Centro T'ikay. Especialistas en salud mental y terapias integrales en el Valle Sagrado y modalidad online.">
-    <meta name="keywords" content="psicología Urubamba, equipo psicólogos Cusco, centro de terapias Valle Sagrado, sobre nosotros Tikay">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,19 +12,29 @@
 </head>
 <body>
 
+    <!-- Encabezado / Navegación (Sincronizado) -->
     <header>
         <a href="index.html" class="brand">
             <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
-        <nav>
+        
+        <!-- Botón de Menú Hamburguesa para celulares -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Quiénes Somos</a></li>
-                <!-- AQUI EMPIEZA EL DROPDOWN -->
+                <li><a href="nosotros.html" style="color: var(--fucsia);">Quiénes Somos</a></li>
+                
+                <!-- Menú desplegable móvil sincronizado -->
                 <li class="dropdown">
-                    <a href="index.html#servicios" style="cursor: pointer;">Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content">
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer;">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    </a>
+                    <div class="dropdown-content" id="drop-servicios">
                         <a href="psicologia-infantil.html">Psicología Infantil</a>
                         <a href="psicologia-adolescentes.html">Psicología Adolescentes</a>
                         <a href="psicologia-adultos.html">Psicología para Adultos</a>
@@ -37,7 +44,8 @@
                         <a href="neuropsicologia.html">Neuropsicología</a>
                     </div>
                 </li>
-                <li><a href="#contacto">Contacto</a></li>
+                
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -56,7 +64,7 @@
         <div class="historia-nosotros">
             <h2>Nuestra Raíz y Propósito</h2>
             <p>Rodeados por la vibrante energía de los Apus en Urubamba, Cusco, en el <strong>Centro T'ikay</strong> nacimos con la convicción de que cada persona florece a su propio ritmo. T'ikay, que significa "florecer" en quechua, representa el compromiso profundo con la salud mental, el aprendizaje y la comunicación.</p>
-            <p>Fusionamos metodologías científicas innovadoras con la calidez, la alegría y los colores que caracterizan a nuestra cultura andina. Hoy llevamos nuestro compromiso más allá de nuestras instalaciones físicas, brindando un espacio seguro <strong>tanto de manera presencial como virtual</strong> para acompañar a quienes más lo necesitan sin barreras geográficas.</p>
+            <p>Fusionamos metodologías científicas innovadoras con la calidez, la alegría y los colores que caracterizan a nuestra cultura andina. Hoy llevamos nuestro compromiso más allá de nuestras instalaciones físicas, brindando un espacio seguro <strong>tanto de manera presencial como virtual</strong>.</p>
         </div>
 
         <div class="mision-vision">
@@ -80,7 +88,6 @@
             <div class="mapa-frame">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.532356399676!2d-72.12879555!3d-13.3009715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d860e326b27d1%3A0x6b8030bb4d1c4484!2sUrubamba!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Urubamba"></iframe>
             </div>
-            <!-- ENLACE SEGURO A GOOGLE MAPS -->
             <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="btn-principal btn-mapa">
                 <i class="fas fa-map-marked-alt"></i> Abrir en Google Maps
             </a>
@@ -118,10 +125,23 @@
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- SCRIPT CLAVE PARA EL MENÚ EN CELULARES -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
 </body>
 </html>
