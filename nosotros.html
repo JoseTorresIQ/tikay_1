@@ -8,14 +8,14 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <!-- Encabezado / Navegación (Sincronizado) -->
     <header>
-        <a href="index.html" class="brand">
-            <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo Centro de Terapia T'ikay">
+        <a href="./index.html" class="brand">
+            <img src="./assets/img/logo_nosotros.jpg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
         
@@ -35,17 +35,17 @@
                         Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="arteterapia.html">Arteterapia</a>
-                        <a href="neuropsicologia.html">Neuropsicología</a>
+                        <a href="./servicios/psicologia-infantil.html">Psicología Infantil</a>
+                        <a href="./servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
+                        <a href="./servicios/psicologia-adultos.html">Psicología para Adultos</a>
+                        <a href="./servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
+                        <a href="./servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
+                        <a href="./servicios/arteterapia.html">Arteterapia</a>
+                        <a href="./servicios/neuropsicologia.html">Neuropsicología</a>
                     </div>
                 </li>
                 
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -106,7 +106,7 @@
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 987 654 321</li>
+                    <li><i class="fab fa-whatsapp"></i> +51 992204470</li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
                     <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
                 </ul>
@@ -114,8 +114,8 @@
             <div class="footer-col">
                 <h4>Síguenos</h4>
                 <div class="redes-sociales">
-                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="ig-link">
-                        <i class="fab fa-instagram"></i> @centro_tikay
+                    <a href="https://www.instagram.com/tikay.centro/" target="_blank" rel="noopener noreferrer" class="ig-link">
+                        <i class="fab fa-instagram"></i> @tikay.centro
                     </a>
                 </div>
             </div>
@@ -125,23 +125,11 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT CLAVE PARA EL MENÚ EN CELULARES -->
-    <script>
-        const menuToggle = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            if (navMenu.classList.contains('active')) {
-                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
-            } else {
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
-    </script>
+<!-- Llamada al Script Modular -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

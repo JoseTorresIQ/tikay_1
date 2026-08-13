@@ -20,14 +20,14 @@
     <!-- Fuentes e Íconos -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
 <!-- Encabezado / Navegación Mejorado para Móviles -->
 <header>
         <a href="index.html" class="brand">
-            <img src="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo Centro de Terapia T'ikay">
+            <img src="./assets/img/logo_inicio.jpg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
         
@@ -47,12 +47,12 @@
                         Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="arteterapia.html">Arteterapia</a>
+                        <a href="./servicios/psicologia-infantil.html">Psicología Infantil</a>
+                        <a href="./servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
+                        <a href="./servicios/psicologia-adultos.html">Psicología para Adultos</a>
+                        <a href="./servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
+                        <a href="./servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
+                        <a href="./servicios/arteterapia.html">Arteterapia</a>
                         <a href="neuropsicologia.html">Neuropsicología</a>
                     </div>
                 </li>
@@ -71,7 +71,7 @@
             </div>
             <h1>Floreciendo con alegría, color y comprensión</h1>
             <p>Brindamos servicios especializados de Psicología y Terapias integrales. Acompañamos el desarrollo de tu familia con calidez andina, desde nuestras instalaciones en Urubamba o desde la comodidad de tu hogar vía online.</p>
-            <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" class="btn-principal">
+            <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" class="btn-principal">
                 <i class="fab fa-whatsapp"></i> Reserva una Cita
             </a>
         </div>
@@ -86,15 +86,19 @@
     <section class="seccion-carrusel">
         <div class="carrusel-contenedor">
             <div class="slide activo">
-                <img src="https://images.unsplash.com/photo-1503454537195-1dc534b25fc5?auto=format&fit=crop&w=1200&q=80" alt="Niños jugando en terapia psicologica">
+                <img src="./assets/img/inicio/img1.jpg" alt="Niños jugando en terapia psicologica">
                 <div class="slide-texto fondo-magenta">Entornos seguros y creativos</div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1200&q=80" alt="Materiales didácticos para terapia de aprendizaje">
+                <img src="./assets/img/inicio/img2.jpg" alt="Materiales didácticos para terapia de aprendizaje">
                 <div class="slide-texto fondo-mostaza">Aprendizaje a tu propio ritmo</div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Terapia psicologica online y presencial">
+                <img src="./assets/img/inicio/img3.jpg" alt="Terapia psicologica online y presencial">
+                <div class="slide-texto fondo-turquesa">Acompañamiento profesional estés donde estés</div>
+            </div>
+            <div class="slide">
+                <img src="./assets/img/inicio/img4.jpg" alt="Terapia psicologica online y presencial">
                 <div class="slide-texto fondo-turquesa">Acompañamiento profesional estés donde estés</div>
             </div>
             <button class="carrusel-btn prev" aria-label="Anterior" onclick="cambiarSlide(-1)">&#10094;</button>
@@ -126,7 +130,7 @@
                     <div class="badges-modalidad"><span class="badge badge-presencial">Presencial</span></div>
                     <p>Acompañamos a tus pequeños en su desarrollo emocional y social. Utilizamos el juego, los colores y la creatividad en nuestros espacios físicos para brindarles herramientas prácticas que les permitan manejar la ansiedad y fortalecer su autoestima.</p>
                     <!-- NUEVO BOTÓN -->
-                    <a href="psicologia-infantil.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/psicologia-infantil.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Adolescentes -->
@@ -138,7 +142,7 @@
                         <span class="badge badge-virtual">Virtual</span>
                     </div>
                     <p>Apoyo especializado para transitar los cambios de esta etapa. Creamos un espacio de escucha activa (en consultorio o videollamada) donde fortalecemos la identidad, la autoconfianza y la gestión sana de emociones y relaciones interpersonales.</p>
-                    <a href="psicologia-adolescentes.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/psicologia-adolescentes.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Adultos -->
@@ -150,7 +154,7 @@
                         <span class="badge badge-virtual">Virtual</span>
                     </div>
                     <p>Un espacio seguro y libre de juicios para abordar el estrés, la ansiedad o conflictos personales. Promovemos el bienestar integral y el autoconocimiento adaptándonos a tus horarios mediante sesiones presenciales u online.</p>
-                    <a href="psicologia-adultos.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/psicologia-adultos.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Aprendizaje -->
@@ -162,7 +166,7 @@
                         <span class="badge badge-virtual">Virtual</span>
                     </div>
                     <p>Diseñamos estrategias dinámicas para superar dificultades escolares. Potenciamos las habilidades de cada persona respetando su ritmo único, con materiales interactivos en nuestras instalaciones o herramientas digitales a distancia.</p>
-                    <a href="terapia-aprendizaje.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/terapia-aprendizaje.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Lenguaje -->
@@ -174,7 +178,7 @@
                         <span class="badge badge-virtual">Virtual</span>
                     </div>
                     <p>Evaluación y tratamiento lúdico para dificultades de comunicación y expresión. Trabajamos con ejercicios especializados y seguimiento remoto o presencial para que la voz de cada paciente logre florecer.</p>
-                    <a href="terapia-lenguaje.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/terapia-lenguaje.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Arte -->
@@ -185,7 +189,7 @@
                         <span class="badge badge-presencial">Presencial</span>
                     </div>
                     <p>Conectamos con la creatividad utilizando colores, texturas y formas en nuestro centro para facilitar la expresión emocional profunda. Ideal para resolver conflictos internos sin necesidad de utilizar palabras.</p>
-                    <a href="arteterapia.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/arteterapia.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
                 
                 <!-- Contenido Neuropsicología -->
@@ -196,7 +200,7 @@
                         <span class="badge badge-presencial">Presencial</span>
                     </div>
                     <p>Evaluación especializada y estimulación de funciones cognitivas clave como la memoria y la atención. Buscamos optimizar el rendimiento cerebral mediante pruebas clínicas estructuradas presenciales.</p>
-                    <a href="neuropsicologia.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <a href="./servicios/neuropsicologia.html" class="btn-secundario">Ver Servicio Completo</a>
                 </div>
             </div>
         </div>
@@ -231,7 +235,7 @@
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 987 654 321</li>
+                    <li><i class="fab fa-whatsapp"></i> +51 992204470</li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
                     <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
                 </ul>
@@ -239,8 +243,8 @@
             <div class="footer-col">
                 <h4>Síguenos</h4>
                 <div class="redes-sociales">
-                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="ig-link">
-                        <i class="fab fa-instagram"></i> @centro_tikay
+                    <a href="https://www.instagram.com/tikay.centro/" target="_blank" rel="noopener noreferrer" class="ig-link">
+                        <i class="fab fa-instagram"></i> @tikay.centro
                     </a>
                 </div>
             </div>
@@ -251,59 +255,11 @@
     </footer>
 
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- SCRIPT -->
-
-    <!-- Script para Menú Móvil -->
-
-    <script>
-        let slideIndex = 1;
-        mostrarSlides(slideIndex);
-        function cambiarSlide(n) { mostrarSlides(slideIndex += n); }
-        setInterval(() => { cambiarSlide(1); }, 5000);
-
-        function mostrarSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                slides[i].classList.remove("activo");
-            }
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(() => { slides[slideIndex-1].classList.add("activo"); }, 50);
-        }
-
-        const botones = document.querySelectorAll('.pestana-btn');
-        const paneles = document.querySelectorAll('.panel-pestana');
-
-        botones.forEach(boton => {
-            boton.addEventListener('click', () => {
-                botones.forEach(b => b.classList.remove('activo'));
-                paneles.forEach(p => p.classList.remove('activo'));
-                boton.classList.add('activo');
-                const target = boton.getAttribute('data-target');
-                document.getElementById(target).classList.add('activo');
-                boton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            });
-        });
-
-        const menuToggle = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            // Cambiar el icono de hamburguesa a una 'X' al abrir
-            if (navMenu.classList.contains('active')) {
-                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
-            } else {
-                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
-    </script>
+<!-- Llamada al Script Modular -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
