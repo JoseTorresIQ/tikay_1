@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicología Infantil - Centro T'ikay</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/img/logo_WEB.png">
+    
+    <title>Psicología para Adultos - Centro T'ikay</title>
+    <meta name="description" content="Terapia psicológica para adultos en Urubamba y online. Espacio confidencial para abordar ansiedad, estrés, depresión y bienestar emocional.">
+    
+    <!-- Fuentes e Íconos Modernos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-    <!-- Encabezado / Navegación (Sincronizado) -->
+    <!-- Encabezado / Navegación (Glassmorphism) -->
     <header>
-        <a href="../index.html" class="brand">
-            <img src="../assets/img/WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg" alt="Logo T'ikay">
+        <a href="../index.html" class="brand" aria-label="Ir al inicio de Centro T'ikay">
+            <img src="../assets/img/logo_inicio.jpg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
         
-        <!-- Botón de Menú Hamburguesa para celulares -->
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
             <i class="fas fa-bars"></i>
         </div>
 
@@ -26,24 +32,29 @@
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../nosotros.html">Quiénes Somos</a></li>
+                <li><a href="../especialistas/especialistas.html">Especialistas</a></li>
                 
-                <!-- Menú desplegable móvil sincronizado -->
                 <li class="dropdown">
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer; color: var(--fucsia);">
-                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    <a href="../index.html#servicios" class="activo" onclick="if(window.innerWidth <= 768){ event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil'); }">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="../servicios/psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="../servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="../servicios/psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="../servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="../servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="../servicios/arteterapia.html">Arteterapia</a>
-                        <a href="../servicios/neuropsicologia.html">Neuropsicología</a>
+                        <a href="../servicios/psicologia-infantil.html"><i class="fas fa-child" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Psicología Infantil</a>
+                        <a href="../servicios/psicologia-adolescentes.html"><i class="fas fa-users" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Psicología Adolescentes</a>
+                        <a href="../servicios/psicologia-adultos.html"><i class="fas fa-user" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Psicología para Adultos</a>
+                        <a href="../servicios/terapia-aprendizaje.html"><i class="fas fa-book-reader" style="color: var(--mostaza); margin-right: 10px; width: 16px;"></i> Terapia de Aprendizaje</a>
+                        <a href="../servicios/terapia-lenguaje.html"><i class="fas fa-comments" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Terapia de Lenguaje</a>
+                        <a href="../servicios/arteterapia.html"><i class="fas fa-palette" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Arteterapia</a>
+                        <a href="../servicios/neuropsicologia.html"><i class="fas fa-brain" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Neuropsicología</a>
                     </div>
                 </li>
                 
                 <li><a href="../index.html#contacto">Contacto</a></li>
+                <li>
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20reservar%20una%20cita%20para%20Psicología%20de%20Adultos." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+                        <i class="fab fa-whatsapp"></i> Agendar Cita
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -52,66 +63,68 @@
     <section class="carrusel-full-width">
         <div class="carrusel-contenedor">
             <div class="slide activo">
-                <img src="https://images.unsplash.com/photo-1503454537195-1dc534b25fc5?auto=format&fit=crop&w=2000&q=80" alt="Psicología Infantil">
-                <div class="slide-texto fondo-magenta">Desarrollo emocional saludable</div>
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=2000&q=80" alt="Psicoterapia para Adultos">
+                <div class="slide-texto fondo-mostaza"><i class="fas fa-user"></i> Espacio libre de juicios y confidencial</div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=2000&q=80" alt="Juegos en terapia">
-                <div class="slide-texto fondo-mostaza">Aprendizaje a través del juego</div>
+                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=2000&q=80" alt="Bienestar emocional y calma">
+                <div class="slide-texto fondo-turquesa"><i class="fas fa-spa"></i> Reconectando con tu bienestar interior</div>
             </div>
             
-            <button class="carrusel-btn prev" onclick="cambiarSlide(-1)">&#10094;</button>
-            <button class="carrusel-btn next" onclick="cambiarSlide(1)">&#10095;</button>
+            <button class="carrusel-btn prev" aria-label="Anterior" onclick="cambiarSlide(-1)">&#10094;</button>
+            <button class="carrusel-btn next" aria-label="Siguiente" onclick="cambiarSlide(1)">&#10095;</button>
         </div>
     </section>
 
     <!-- Contenido del Servicio -->
     <main class="contenido-servicio-individual">
-        <div class="panel-icono" style="color: var(--fucsia);"><i class="fas fa-child"></i></div>
+        <div class="panel-icono" style="color: var(--terracota);"><i class="fas fa-user"></i></div>
         <h1>Psicología para Adultos</h1>
-        <div class="badges-modalidad" style="margin-bottom: 30px;">
-            <span class="badge badge-presencial">Presencial</span>
-            <span class="badge badge-virtual">Virtual</span>
+        
+        <div class="badges-modalidad" style="margin-bottom: 25px;">
+            <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial Urubamba</span>
+            <span class="badge badge-virtual"><i class="fas fa-video"></i> Modalidad Virtual Online</span>
         </div>
         
-        <p>Los primeros años de vida son fundamentales. En T'ikay, acompañamos a tus pequeños en su desarrollo emocional y social, garantizando un entorno en el que se sientan seguros y validados. Entendemos que cada niño es un universo, por lo que nuestras sesiones son personalizadas y basadas en el respeto.</p>
+        <p>El ritmo de vida actual, las responsabilidades laborales, las pérdidas o las crisis vitales pueden desbalancear nuestro bienestar. En <strong>Centro T'ikay</strong> te brindamos un espacio seguro, ético y empático para reencontrarte contigo mismo, adquirir herramientas de afrontamiento y construir una vida más plena y equilibrada.</p>
 
         <div class="mision-vision">
-            <div class="mv-caja" style="border-bottom: 5px solid var(--fucsia);">
-                <i class="fas fa-puzzle-piece icono-mv" style="color: var(--fucsia);"></i>
-                <h3>Metodología</h3>
-                <p>Utilizamos el juego, los colores y la creatividad como lenguaje principal. A través de dinámicas lúdicas, el niño logra exteriorizar lo que siente sin presiones, fortaleciendo sus herramientas internas.</p>
+            <div class="mv-caja" style="border-bottom: 4px solid var(--terracota);">
+                <i class="fas fa-hand-holding-heart icono-mv" style="color: var(--terracota);"></i>
+                <h3>Enfoque Terapéutico</h3>
+                <p>Integramos psicoterapia cognitivo-conductual, técnicas de regulación emocional, mindfulness y arteterapia según las necesidades individuales de cada persona.</p>
             </div>
-            <div class="mv-caja" style="border-bottom: 5px solid var(--mostaza);">
-                <i class="fas fa-heart icono-mv" style="color: var(--mostaza);"></i>
-                <h3>Beneficios</h3>
-                <p>Ayudamos a reducir la ansiedad, manejar rabietas, superar miedos y fortalecer su autoestima. Además, trabajamos de la mano con los padres para dar continuidad al aprendizaje en casa.</p>
+            <div class="mv-caja" style="border-bottom: 4px solid var(--turquesa);">
+                <i class="fas fa-leaf icono-mv" style="color: var(--turquesa);"></i>
+                <h3>Áreas de Trabajo</h3>
+                <p>Tratamiento de ansiedad, depresión, duelo, manejo del estrés y burnout, problemas de pareja, autoestima y toma de decisiones en momentos de transición.</p>
             </div>
         </div>
         
-        <br>
-        <a href="https://wa.me/51987654321?text=Hola,%20deseo%20reservar%20una%20cita%20para%20Psicología%20Infantil." target="_blank" class="btn-principal" style="margin-top: 20px;">
-            <i class="fab fa-whatsapp"></i> Agendar una Sesión
-        </a>
+        <div style="margin-top: 40px;">
+            <a href="https://wa.me/51992204470?text=Hola,%20deseo%20reservar%20una%20cita%20para%20Psicología%20de%20Adultos." target="_blank" rel="noopener noreferrer" class="btn-principal">
+                <i class="fab fa-whatsapp"></i> Agendar Sesión para Adultos
+            </a>
+        </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Profesional -->
     <footer id="contacto">
         <div class="footer-container">
-            <div class="footer-col">
-                <div class="brand-footer">
-                    <h4>T'IKAY</h4>
-                </div>
-                <p>Centro de Terapias y Psicología online y presencial en el Valle Sagrado. Cuidamos el bienestar emocional de tu familia.</p>
+            <div class="footer-col brand-footer">
+                <h4>T'IKAY</h4>
+                <p>Centro de Psicología y Terapias Integrales. Sembrando confianza y florecimiento emocional para niños, adolescentes y adultos en el Valle Sagrado y el mundo.</p>
             </div>
+
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 987 654 321</li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51992204470" target="_blank" rel="noopener noreferrer" class="link-footer">+51 992 204 470</a></li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
-                    <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer">Urubamba, Cusco, Perú</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4>Síguenos</h4>
                 <div class="redes-sociales">
@@ -121,16 +134,16 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Centro de Terapia T'ikay. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Centro de Terapias T'ikay. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-<!-- Llamada al Script Modular (Retrocediendo una carpeta) -->
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

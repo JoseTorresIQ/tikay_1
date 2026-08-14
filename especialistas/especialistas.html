@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/img/logo_WEB.png">
+    
     <title>Nuestros Especialistas - Centro T'ikay</title>
     <meta name="description" content="Conoce al equipo de psicólogos y terapeutas del Centro T'ikay en Urubamba. Profesionales expertos en el bienestar infantil, adolescente y adulto.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes e Íconos Modernos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-    <!-- Encabezado / Navegación -->
+    <!-- Encabezado / Navegación (Glassmorphism) -->
     <header>
-        <a href="../index.html" class="brand">
-            <img src="../assets/img/logo_nosotros.jpg" alt="Logo Centro de Terapia T'ikay" onerror="this.src='WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg'">
+        <a href="../index.html" class="brand" aria-label="Ir al inicio de Centro T'ikay">
+            <img src="../assets/img/logo_nosotros.jpg" alt="Logo Centro de Terapia T'ikay" onerror="this.src='../assets/img/logo_inicio.jpg'">
             <span class="brand-name">T'IKAY</span>
         </a>
         
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
             <i class="fas fa-bars"></i>
         </div>
 
@@ -27,33 +32,38 @@
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../nosotros.html">Quiénes Somos</a></li>
-                <li><a href="../especialistas/especialistas.html">Especialistas</a></li>
+                <li><a href="../especialistas/especialistas.html" class="activo">Especialistas</a></li>
                 
-                <!-- Menú desplegable modificado para no saltar de sección -->
+                <!-- Menú desplegable -->
                 <li class="dropdown">
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer;">
-                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    <a href="../index.html#servicios" onclick="if(window.innerWidth <= 768){ event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil'); }">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="../servicios/psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="../servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="../servicios/psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="../servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="../servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="../servicios/arteterapia.html">Arteterapia</a>
-                        <a href="../servicios/neuropsicologia.html">Neuropsicología</a>
+                        <a href="../servicios/psicologia-infantil.html"><i class="fas fa-child" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Psicología Infantil</a>
+                        <a href="../servicios/psicologia-adolescentes.html"><i class="fas fa-users" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Psicología Adolescentes</a>
+                        <a href="../servicios/psicologia-adultos.html"><i class="fas fa-user" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Psicología para Adultos</a>
+                        <a href="../servicios/terapia-aprendizaje.html"><i class="fas fa-book-reader" style="color: var(--mostaza); margin-right: 10px; width: 16px;"></i> Terapia de Aprendizaje</a>
+                        <a href="../servicios/terapia-lenguaje.html"><i class="fas fa-comments" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Terapia de Lenguaje</a>
+                        <a href="../servicios/arteterapia.html"><i class="fas fa-palette" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Arteterapia</a>
+                        <a href="../servicios/neuropsicologia.html"><i class="fas fa-brain" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Neuropsicología</a>
                     </div>
                 </li>
                 
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li>
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20especialistas." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+                        <i class="fab fa-whatsapp"></i> Agendar Cita
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Interno -->
     <section class="hero-interno">
-        <h1>Nuestro Equipo</h1>
-        <p>Conoce a los profesionales comprometidos con el bienestar de tu familia.</p>
+        <h1>Nuestro Equipo Profesional</h1>
+        <p>Especialistas colegiados y comprometidos con el desarrollo integral y el florecimiento de tu familia.</p>
         <div class="onda-decorativa">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C79.14,118.5,159.27,117.8,232.16,91.8,264.44,80.12,293.19,70.19,321.39,56.44Z" class="shape-fill"></path>
@@ -64,7 +74,6 @@
     <!-- Contenido de Especialistas -->
     <main class="contenido-especialistas">
         <div class="grid-especialistas">
-            
 
             <!-- Especialista 1 -->
             <div class="tarjeta-especialista">
@@ -74,8 +83,7 @@
                     <span class="cargo-especialista">Terapeuta de Lenguaje y Aprendizaje</span>
                     <p>Experta en neurodesarrollo y dificultades del aprendizaje como dislexia y TDAH. Tania utiliza herramientas dinámicas e interactivas tanto presenciales como virtuales para potenciar las habilidades comunicativas y cognitivas de niños y adolescentes, trabajando siempre de la mano con los padres.</p>
                     
-                    <!-- NUEVO: Botón WhatsApp Personalizado -->
-                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20agendar%20una%20cita%20con%20el%20Lic.%20Tania%20Canqui." target="_blank" rel="noopener noreferrer" class="btn-especialista">
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20agendar%20una%20cita%20con%20la%20Lic.%20Tania%20Canqui." target="_blank" rel="noopener noreferrer" class="btn-especialista">
                         <i class="fab fa-whatsapp"></i> Cita con Tania
                     </a>
                 </div>
@@ -89,8 +97,7 @@
                     <span class="cargo-especialista">Psicóloga Clínica Infantil</span>
                     <p>Con más de 10 años de experiencia acompañando a niños y familias en el Valle Sagrado. Ana es especialista en terapia de juego y gestión emocional temprana. Su enfoque cálido y creativo permite que los más pequeños encuentren un lugar seguro para expresarse y florecer a su propio ritmo.</p>
                     
-                    <!-- NUEVO: Botón WhatsApp Personalizado -->
-                    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20agendar%20una%20cita%20con%20la%20Dra.%20Ana%20Condori." target="_blank" rel="noopener noreferrer" class="btn-especialista">
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20agendar%20una%20cita%20con%20la%20Dra.%20Ana%20Condori." target="_blank" rel="noopener noreferrer" class="btn-especialista">
                         <i class="fab fa-whatsapp"></i> Cita con Ana
                     </a>
                 </div>
@@ -104,8 +111,7 @@
                     <span class="cargo-especialista">Psicoterapeuta de Adultos</span>
                     <p>Con maestría en Psicología Clínica y formación en Arteterapia. Elena brinda un espacio libre de juicios para abordar la ansiedad, depresión y crisis vitales. Integra el arte como medio de expresión profunda, ayudando a los adultos a reconectar con su bienestar integral y su entorno diario.</p>
                     
-                    <!-- NUEVO: Botón WhatsApp Personalizado -->
-                    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20agendar%20una%20cita%20con%20la%20Mag.%20Elena%20Vargas." target="_blank" rel="noopener noreferrer" class="btn-especialista">
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20agendar%20una%20cita%20con%20la%20Mag.%20Elena%20Vargas." target="_blank" rel="noopener noreferrer" class="btn-especialista">
                         <i class="fab fa-whatsapp"></i> Cita con Elena
                     </a>
                 </div>
@@ -114,42 +120,47 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Profesional -->
     <footer id="contacto">
         <div class="footer-container">
-            <div class="footer-col">
-                <div class="brand-footer">
-                    <h4>T'IKAY</h4>
-                </div>
-                <p>Centro de Terapias y Psicología online y presencial en el Valle Sagrado. Cuidamos el bienestar emocional de tu familia.</p>
+            <div class="footer-col brand-footer">
+                <h4>T'IKAY</h4>
+                <p>Centro de Psicología y Terapias Integrales. Sembrando confianza y florecimiento emocional para niños, adolescentes y adultos en el Valle Sagrado y el mundo.</p>
+                <p style="font-size: 0.85rem; opacity: 0.75;"><i class="fas fa-shield-heart" style="color: var(--mostaza); margin-right: 5px;"></i> Confidencialidad y ética profesional garantizadas.</p>
             </div>
+
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 992204470</li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51992204470" target="_blank" rel="noopener noreferrer" class="link-footer">+51 992 204 470</a></li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
-                    <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer">Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-globe"></i> Atención Presencial y Virtual</li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="redes-sociales">
+                <h4>Conéctate con Nosotros</h4>
+                <p>Síguenos en redes sociales para ver consejos prácticos sobre crianza respetuosa, salud emocional y aprendizaje.</p>
+                <div class="redes-sociales" style="margin-top: 15px;">
                     <a href="https://www.instagram.com/tikay.centro/" target="_blank" rel="noopener noreferrer" class="ig-link">
                         <i class="fab fa-instagram"></i> @tikay.centro
                     </a>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Centro de Terapia T'ikay. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Centro de Terapias T'ikay. Todos los derechos reservados. Urubamba, Valle Sagrado - Cusco.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/51987654321?text=Hola,%20deseo%20más%20información%20sobre%20sus%20especialistas." class="btn-flotante-wa" target="_blank" title="Contáctanos por WhatsApp">
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20especialistas." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-<!-- Llamada al Script Modular (Retrocediendo una carpeta) -->
+    <!-- Script Modular -->
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

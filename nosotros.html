@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/img/logo_WEB.png">
+    
     <title>Quiénes Somos - Centro T'ikay Urubamba</title>
     <meta name="description" content="Conoce la historia, misión y visión del Centro T'ikay. Especialistas en salud mental y terapias integrales en el Valle Sagrado y modalidad online.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes e Íconos Modernos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-    <!-- Encabezado / Navegación (Sincronizado) -->
+    <!-- Encabezado / Navegación (Glassmorphism) -->
     <header>
-        <a href="./index.html" class="brand">
+        <a href="./index.html" class="brand" aria-label="Ir al inicio de Centro T'ikay">
             <img src="./assets/img/logo_nosotros.jpg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
         
         <!-- Botón de Menú Hamburguesa para celulares -->
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
             <i class="fas fa-bars"></i>
         </div>
 
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html" style="color: var(--fucsia);">Quiénes Somos</a></li>
+                <li><a href="nosotros.html" class="activo">Quiénes Somos</a></li>
                 <li><a href="./especialistas/especialistas.html">Especialistas</a></li>
                 
-                <!-- Menú desplegable móvil sincronizado -->
+                <!-- Menú desplegable -->
                 <li class="dropdown">
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer;">
-                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    <a href="./index.html#servicios" onclick="if(window.innerWidth <= 768){ event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil'); }">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="./servicios/psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="./servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="./servicios/psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="./servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="./servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="./servicios/arteterapia.html">Arteterapia</a>
-                        <a href="./servicios/neuropsicologia.html">Neuropsicología</a>
+                        <a href="./servicios/psicologia-infantil.html"><i class="fas fa-child" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Psicología Infantil</a>
+                        <a href="./servicios/psicologia-adolescentes.html"><i class="fas fa-users" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Psicología Adolescentes</a>
+                        <a href="./servicios/psicologia-adultos.html"><i class="fas fa-user" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Psicología para Adultos</a>
+                        <a href="./servicios/terapia-aprendizaje.html"><i class="fas fa-book-reader" style="color: var(--mostaza); margin-right: 10px; width: 16px;"></i> Terapia de Aprendizaje</a>
+                        <a href="./servicios/terapia-lenguaje.html"><i class="fas fa-comments" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Terapia de Lenguaje</a>
+                        <a href="./servicios/arteterapia.html"><i class="fas fa-palette" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Arteterapia</a>
+                        <a href="./servicios/neuropsicologia.html"><i class="fas fa-brain" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Neuropsicología</a>
                     </div>
                 </li>
                 
                 <li><a href="./index.html#contacto">Contacto</a></li>
+                <li>
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+                        <i class="fab fa-whatsapp"></i> Agendar Cita
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Interno -->
     <section class="hero-interno">
         <h1>Nuestra Esencia</h1>
-        <p>Conoce al equipo que cuida el bienestar de tu familia presencial y a distancia.</p>
+        <p>Conoce al equipo y los valores que cuidan el bienestar integral de tu familia presencial y a distancia.</p>
         <div class="onda-decorativa">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C79.14,118.5,159.27,117.8,232.16,91.8,264.44,80.12,293.19,70.19,321.39,56.44Z" class="shape-fill"></path>
@@ -61,76 +72,110 @@
         </div>
     </section>
 
+    <!-- Contenido Principal -->
     <main class="contenido-nosotros">
         <div class="historia-nosotros">
             <h2>Nuestra Raíz y Propósito</h2>
-            <p>Rodeados por la vibrante energía de los Apus en Urubamba, Cusco, en el <strong>Centro T'ikay</strong> nacimos con la convicción de que cada persona florece a su propio ritmo. T'ikay, que significa "florecer" en quechua, representa el compromiso profundo con la salud mental, el aprendizaje y la comunicación.</p>
-            <p>Fusionamos metodologías científicas innovadoras con la calidez, la alegría y los colores que caracterizan a nuestra cultura andina. Hoy llevamos nuestro compromiso más allá de nuestras instalaciones físicas, brindando un espacio seguro <strong>tanto de manera presencial como virtual</strong>.</p>
+            <p>Rodeados por la vibrante energía y serenidad del Valle Sagrado en Urubamba, Cusco, en el <strong>Centro T'ikay</strong> nacimos con la convicción profunda de que cada persona florece a su propio ritmo. T'ikay, que en lengua quechua significa <em>"florecer"</em>, encarna nuestro compromiso inquebrantable con la salud mental, el aprendizaje y la comunicación.</p>
+            <p>Fusionamos metodologías científicas innovadoras con la calidez, la alegría y la empatía que caracterizan a nuestra cultura. Hoy llevamos nuestro acompañamiento terapéutico tanto en nuestro acogedor consultorio físico como a través de sesiones virtuales para familias en todo el país y el mundo.</p>
         </div>
 
         <div class="mision-vision">
             <div class="mv-caja caja-mision">
                 <i class="fas fa-seedling icono-mv"></i>
                 <h3>Nuestra Misión</h3>
-                <p>Sembrar confianza y utilizar herramientas innovadoras presenciales y digitales para que nuestros pacientes y sus familias descubran su máximo potencial.</p>
+                <p>Sembrar confianza y utilizar herramientas terapéuticas de vanguardia presenciales y digitales para que cada niño, adolescente y adulto descubra y alcance su máximo potencial emocional y cognitivo.</p>
             </div>
             <div class="mv-caja caja-vision">
                 <i class="fas fa-sun icono-mv"></i>
                 <h3>Nuestra Visión</h3>
-                <p>Ser el centro de terapias integrales más querido del Valle Sagrado y un referente nacional en atención psicológica virtual y ética profesional.</p>
+                <p>Ser el centro de terapias integrales de referencia en el Valle Sagrado y un modelo nacional en atención psicológica humanizada, ética profesional y acompañamiento familiar a distancia.</p>
             </div>
         </div>
     </main>
 
+    <!-- Sección de Ubicación & Contacto -->
     <section class="seccion-mapa" id="ubicacion">
         <div class="contenedor-mapa">
-            <h2>Visítanos en Urubamba</h2>
-            <p>Nos encontramos en el corazón del Valle Sagrado. ¡Te esperamos con los brazos abiertos!</p>
-            <div class="mapa-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.532356399676!2d-72.12879555!3d-13.3009715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d860e326b27d1%3A0x6b8030bb4d1c4484!2sUrubamba!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Urubamba"></iframe>
+            <div class="seccion-titulo-centro" style="margin-bottom: 20px;">
+                <span class="tag-subtitulo">Ubicación y Consultorio</span>
+                <h2>Visítanos en Urubamba</h2>
+                <p>Nos encontramos en el corazón del Valle Sagrado. ¡Te esperamos con un espacio cómodo y seguro!</p>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="btn-principal btn-mapa">
-                <i class="fas fa-map-marked-alt"></i> Abrir en Google Maps
-            </a>
+            
+            <div class="mapa-grid">
+                <div class="mapa-info">
+                    <h3>Centro de Terapias T'ikay</h3>
+                    <p>Un espacio acogedor diseñado especialmente para la tranquilidad de niños, jóvenes y familias.</p>
+                    
+                    <ul class="lista-detalles-ubicacion">
+                        <li>
+                            <i class="fas fa-map-pin"></i>
+                            <div><strong>Dirección:</strong> Urubamba, Valle Sagrado, Cusco, Perú.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div><strong>Horarios de Atención:</strong> Lunes a Sábado previa cita.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-video"></i>
+                            <div><strong>Modalidad Online:</strong> Sesiones virtuales personalizadas.</div>
+                        </li>
+                    </ul>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="btn-principal btn-mapa">
+                        <i class="fas fa-map-marked-alt"></i> Ver en Google Maps
+                    </a>
+                </div>
+
+                <div class="mapa-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.532356399676!2d-72.12879555!3d-13.3009715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d860e326b27d1%3A0x6b8030bb4d1c4484!2sUrubamba!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de Urubamba"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Profesional -->
     <footer id="contacto">
         <div class="footer-container">
-            <div class="footer-col">
-                <div class="brand-footer">
-                    <h4>T'IKAY</h4>
-                </div>
-                <p>Centro de Terapias y Psicología online y presencial en el Valle Sagrado. Cuidamos el bienestar emocional de tu familia.</p>
+            <div class="footer-col brand-footer">
+                <h4>T'IKAY</h4>
+                <p>Centro de Psicología y Terapias Integrales. Sembrando confianza y florecimiento emocional para niños, adolescentes y adultos en el Valle Sagrado y el mundo.</p>
+                <p style="font-size: 0.85rem; opacity: 0.75;"><i class="fas fa-shield-heart" style="color: var(--mostaza); margin-right: 5px;"></i> Confidencialidad y ética profesional garantizadas.</p>
             </div>
+
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 992204470</li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51992204470" target="_blank" rel="noopener noreferrer" class="link-footer">+51 992 204 470</a></li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
-                    <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer">Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-globe"></i> Atención Presencial y Virtual</li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="redes-sociales">
+                <h4>Conéctate con Nosotros</h4>
+                <p>Síguenos en redes sociales para ver consejos prácticos sobre crianza respetuosa, salud emocional y aprendizaje.</p>
+                <div class="redes-sociales" style="margin-top: 15px;">
                     <a href="https://www.instagram.com/tikay.centro/" target="_blank" rel="noopener noreferrer" class="ig-link">
                         <i class="fab fa-instagram"></i> @tikay.centro
                     </a>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Centro de Terapia T'ikay. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Centro de Terapias T'ikay. Todos los derechos reservados. Urubamba, Valle Sagrado - Cusco.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-<!-- Llamada al Script Modular -->
+    <!-- Script Modular -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

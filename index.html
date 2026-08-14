@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Aquí es donde vinculas tu nuevo ícono -->
-    <link rel="icon" type="image/png" href="./assets/img/logo_WEB.png" >
+    <!-- Ícono del Sitio -->
+    <link rel="icon" type="image/png" href="./assets/img/logo_WEB.png">
     
     <!-- SEO Meta Tags -->
     <title>T'ikay - Centro de Psicología y Terapias en Urubamba (Presencial y Virtual)</title>
@@ -14,54 +14,61 @@
     <meta name="author" content="Centro T'ikay">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph (Para compartir bonito en WhatsApp y Redes Sociales) -->
+    <!-- Open Graph (WhatsApp y Redes Sociales) -->
     <meta property="og:title" content="Centro T'ikay - Terapias y Psicología">
     <meta property="og:description" content="Especialistas en el desarrollo integral de tu familia en el Valle Sagrado. Sesiones presenciales y virtuales.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="WhatsApp Image 2026-08-10 at 1.21.21 PM.jpeg">
+    <meta property="og:image" content="./assets/img/logo_WEB.png">
     
-    <!-- Fuentes e Íconos -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fuentes e Íconos Modernos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-<!-- Encabezado / Navegación Mejorado para Móviles -->
-<header>
-        <a href="index.html" class="brand">
+    <!-- Encabezado / Navegación (Glassmorphism) -->
+    <header>
+        <a href="index.html" class="brand" aria-label="Ir al inicio de Centro T'ikay">
             <img src="./assets/img/logo_inicio.jpg" alt="Logo Centro de Terapia T'ikay">
             <span class="brand-name">T'IKAY</span>
         </a>
         
         <!-- Botón de Menú Hamburguesa para celulares -->
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
             <i class="fas fa-bars"></i>
         </div>
 
         <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="nosotros.html">Quiénes Somos</a></li>
                 <li><a href="./especialistas/especialistas.html">Especialistas</a></li>
                 
-                <!-- Menú desplegable modificado para no saltar de sección -->
+                <!-- Menú desplegable de servicios -->
                 <li class="dropdown">
-                    <a href="#" onclick="event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil');" style="cursor: pointer;">
-                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i>
+                    <a href="#servicios" onclick="if(window.innerWidth <= 768){ event.preventDefault(); document.getElementById('drop-servicios').classList.toggle('mostrar-movil'); }">
+                        Servicios <i class="fas fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px;"></i>
                     </a>
                     <div class="dropdown-content" id="drop-servicios">
-                        <a href="./servicios/psicologia-infantil.html">Psicología Infantil</a>
-                        <a href="./servicios/psicologia-adolescentes.html">Psicología Adolescentes</a>
-                        <a href="./servicios/psicologia-adultos.html">Psicología para Adultos</a>
-                        <a href="./servicios/terapia-aprendizaje.html">Terapia de Aprendizaje</a>
-                        <a href="./servicios/terapia-lenguaje.html">Terapia de Lenguaje</a>
-                        <a href="./servicios/arteterapia.html">Arteterapia</a>
-                        <a href="./servicios/neuropsicologia.html">Neuropsicología</a>
+                        <a href="./servicios/psicologia-infantil.html"><i class="fas fa-child" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Psicología Infantil</a>
+                        <a href="./servicios/psicologia-adolescentes.html"><i class="fas fa-users" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Psicología Adolescentes</a>
+                        <a href="./servicios/psicologia-adultos.html"><i class="fas fa-user" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Psicología para Adultos</a>
+                        <a href="./servicios/terapia-aprendizaje.html"><i class="fas fa-book-reader" style="color: var(--mostaza); margin-right: 10px; width: 16px;"></i> Terapia de Aprendizaje</a>
+                        <a href="./servicios/terapia-lenguaje.html"><i class="fas fa-comments" style="color: var(--fucsia); margin-right: 10px; width: 16px;"></i> Terapia de Lenguaje</a>
+                        <a href="./servicios/arteterapia.html"><i class="fas fa-palette" style="color: var(--turquesa); margin-right: 10px; width: 16px;"></i> Arteterapia</a>
+                        <a href="./servicios/neuropsicologia.html"><i class="fas fa-brain" style="color: var(--terracota); margin-right: 10px; width: 16px;"></i> Neuropsicología</a>
                     </div>
                 </li>
                 
                 <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+                        <i class="fab fa-whatsapp"></i> Agendar Cita
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -70,15 +77,40 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <div class="etiquetas-hero">
-                <span class="etiqueta-ubicacion"><i class="fas fa-sun"></i> Valle Sagrado, Cusco</span>
-                <span class="etiqueta-ubicacion"><i class="fas fa-laptop-medical"></i> Atención Virtual Global</span>
+                <span class="etiqueta-ubicacion"><i class="fas fa-mountain-sun"></i> Urubamba, Valle Sagrado</span>
+                <span class="etiqueta-ubicacion"><i class="fas fa-laptop-medical"></i> Modalidad Presencial y Virtual Global</span>
             </div>
-            <h1>Floreciendo con alegría, color y comprensión</h1>
-            <p>Brindamos servicios especializados de Psicología y Terapias integrales. Acompañamos el desarrollo de tu familia con calidez andina, desde nuestras instalaciones en Urubamba o desde la comodidad de tu hogar vía online.</p>
-            <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" class="btn-principal">
-                <i class="fab fa-whatsapp"></i> Reserva una Cita
-            </a>
+            
+            <h1>Floreciendo con <span class="highlight-text">alegría, color</span> y comprensión</h1>
+            
+            <p>Brindamos atención especializada en psicología y terapias integrales para niños, adolescentes y adultos. Acompañamos el bienestar de tu familia con calidez humana, desde nuestras instalaciones en Urubamba o en sesiones online personalizadas.</p>
+            
+            <div class="hero-botones">
+                <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20terapia." target="_blank" rel="noopener noreferrer" class="btn-principal">
+                    <i class="fab fa-whatsapp"></i> Reserva una Cita
+                </a>
+                <a href="#servicios" class="btn-hero-secundario">
+                    <i class="fas fa-compass"></i> Ver Especialidades
+                </a>
+            </div>
+
+            <!-- Métricas / Datos de Confianza -->
+            <div class="hero-stats">
+                <div class="hero-stat-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Terapeutas Colegiados</span>
+                </div>
+                <div class="hero-stat-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Enfoque Cálido y Humano</span>
+                </div>
+                <div class="hero-stat-item">
+                    <i class="fas fa-globe-americas"></i>
+                    <span>Atención Híbrida y Virtual</span>
+                </div>
+            </div>
         </div>
+
         <div class="onda-decorativa">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C79.14,118.5,159.27,117.8,232.16,91.8,264.44,80.12,293.19,70.19,321.39,56.44Z" class="shape-fill"></path>
@@ -86,55 +118,127 @@
         </div>
     </section>
 
-    <!-- Carrusel de Imágenes (SEO friendly con atributos ALT) -->
+    <!-- Carrusel de Imágenes con Controles Modernos -->
     <section class="seccion-carrusel">
         <div class="carrusel-contenedor">
             <div class="slide activo">
-                <img src="./assets/img/inicio/img1.jpg" alt="Niños jugando en terapia psicologica">
-                <div class="slide-texto fondo-magenta">Entornos seguros y creativos</div>
+                <img src="./assets/img/inicio/img1.jpg" alt="Niños jugando en terapia psicológica en Centro T'ikay">
+                <div class="slide-texto fondo-magenta"><i class="fas fa-shapes"></i> Entornos seguros y creativos</div>
             </div>
             <div class="slide">
                 <img src="./assets/img/inicio/img2.jpg" alt="Materiales didácticos para terapia de aprendizaje">
-                <div class="slide-texto fondo-mostaza">Aprendizaje a tu propio ritmo</div>
+                <div class="slide-texto fondo-mostaza"><i class="fas fa-lightbulb"></i> Aprendizaje a tu propio ritmo</div>
             </div>
             <div class="slide">
-                <img src="./assets/img/inicio/img3.jpg" alt="Terapia psicologica online y presencial">
-                <div class="slide-texto fondo-turquesa">Acompañamiento profesional estés donde estés</div>
+                <img src="./assets/img/inicio/img3.jpg" alt="Terapia psicológica online y presencial">
+                <div class="slide-texto fondo-turquesa"><i class="fas fa-headset"></i> Acompañamiento profesional estés donde estés</div>
             </div>
             <div class="slide">
-                <img src="./assets/img/inicio/img4.jpg" alt="Terapia psicologica online y presencial">
-                <div class="slide-texto fondo-turquesa">Acompañamiento profesional estés donde estés</div>
+                <img src="./assets/img/inicio/img4.jpg" alt="Espacios terapéuticos en Urubamba">
+                <div class="slide-texto fondo-turquesa"><i class="fas fa-seedling"></i> Florecer emocional y familiar</div>
             </div>
-            <button class="carrusel-btn prev" aria-label="Anterior" onclick="cambiarSlide(-1)">&#10094;</button>
-            <button class="carrusel-btn next" aria-label="Siguiente" onclick="cambiarSlide(1)">&#10095;</button>
+            
+            <button class="carrusel-btn prev" aria-label="Slide anterior" onclick="cambiarSlide(-1)">&#10094;</button>
+            <button class="carrusel-btn next" aria-label="Slide siguiente" onclick="cambiarSlide(1)">&#10095;</button>
+            
+            <!-- Dots de navegación -->
+            <div class="carrusel-dots">
+                <span class="dot activo" onclick="irASlide(1)"></span>
+                <span class="dot" onclick="irASlide(2)"></span>
+                <span class="dot" onclick="irASlide(3)"></span>
+                <span class="dot" onclick="irASlide(4)"></span>
+            </div>
         </div>
     </section>
 
-    <!-- Sección de Servicios (Pestañas con tags de modalidad) -->
+    <!-- Sección de Pilares / Valor Diferencial -->
+    <section class="seccion-valores">
+        <div class="seccion-titulo-centro">
+            <span class="tag-subtitulo">Nuestra Metodología</span>
+            <h2>¿Por qué elegir el Centro T'ikay?</h2>
+            <p>Integramos la calidez de nuestra comunidad en el Valle Sagrado con métodos terapéuticos respaldados por la evidencia científica.</p>
+        </div>
+
+        <div class="grid-valores">
+            <div class="tarjeta-valor">
+                <div class="icono-valor verde">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Calidez y Empatía</h3>
+                <p>Creamos un entorno libre de juicios donde cada persona es escuchada, respetada y validada en su proceso individual.</p>
+            </div>
+
+            <div class="tarjeta-valor">
+                <div class="icono-valor turquesa">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Ciencia y Lúdica</h3>
+                <p>Combinamos técnicas neuropsicológicas y de aprendizaje con herramientas lúdicas, artísticas y sensoriales.</p>
+            </div>
+
+            <div class="tarjeta-valor">
+                <div class="icono-valor mostaza">
+                    <i class="fas fa-laptop-house"></i>
+                </div>
+                <h3>Modalidad Híbrida</h3>
+                <p>Sesiones presenciales en nuestro consultorio en Urubamba o sesiones virtuales cómodas desde cualquier lugar del mundo.</p>
+            </div>
+
+            <div class="tarjeta-valor">
+                <div class="icono-valor fucsia">
+                    <i class="fas fa-hands-holding-child"></i>
+                </div>
+                <h3>Alianza con la Familia</h3>
+                <p>Brindamos orientación constante a los padres y cuidadores para asegurar la continuidad de los avances en casa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios y Especialidades (Pestañas Interactivas) -->
     <section id="servicios" class="servicios">
-        <h2>Nuestras Especialidades</h2>
-        <p class="subtitulo-servicios">Desliza y explora nuestras áreas de atención presencial y virtual.</p>
+        <div class="seccion-titulo-centro">
+            <span class="tag-subtitulo">Áreas de Atención</span>
+            <h2>Nuestras Especialidades</h2>
+            <p class="subtitulo-servicios">Selecciona un área para conocer el enfoque, la modalidad de atención y agendar una consulta.</p>
+        </div>
         
         <div class="contenedor-pestanas">
-            <div class="menu-pestanas">
-                <button class="pestana-btn activo" data-target="infantil" style="--color-acento: var(--fucsia);">Infantil</button>
-                <button class="pestana-btn" data-target="adolescentes" style="--color-acento: var(--turquesa);">Adolescentes</button>
-                <button class="pestana-btn" data-target="adultos" style="--color-acento: var(--terracota);">Adultos</button>
-                <button class="pestana-btn" data-target="aprendizaje" style="--color-acento: var(--mostaza);">Aprendizaje</button>
-                <button class="pestana-btn" data-target="lenguaje" style="--color-acento: var(--fucsia);">Lenguaje</button>
-                <button class="pestana-btn" data-target="arte" style="--color-acento: var(--turquesa);">Arteterapia</button>
-                <button class="pestana-btn" data-target="neuro" style="--color-acento: var(--terracota);">Neuropsicología</button>
+            <div class="menu-pestanas" role="tablist">
+                <button class="pestana-btn activo" data-target="infantil" style="--color-acento: var(--fucsia);">
+                    <i class="fas fa-child"></i> Infantil
+                </button>
+                <button class="pestana-btn" data-target="adolescentes" style="--color-acento: var(--turquesa);">
+                    <i class="fas fa-users"></i> Adolescentes
+                </button>
+                <button class="pestana-btn" data-target="adultos" style="--color-acento: var(--terracota);">
+                    <i class="fas fa-user"></i> Adultos
+                </button>
+                <button class="pestana-btn" data-target="aprendizaje" style="--color-acento: var(--mostaza);">
+                    <i class="fas fa-book-reader"></i> Aprendizaje
+                </button>
+                <button class="pestana-btn" data-target="lenguaje" style="--color-acento: var(--fucsia);">
+                    <i class="fas fa-comments"></i> Lenguaje
+                </button>
+                <button class="pestana-btn" data-target="arte" style="--color-acento: var(--turquesa);">
+                    <i class="fas fa-palette"></i> Arteterapia
+                </button>
+                <button class="pestana-btn" data-target="neuro" style="--color-acento: var(--terracota);">
+                    <i class="fas fa-brain"></i> Neuropsicología
+                </button>
             </div>
 
             <div class="contenido-pestanas">
                 <!-- Contenido Infantil -->
-                    <div id="infantil" class="panel-pestana activo" style="--color-borde: var(--fucsia);">
+                <div id="infantil" class="panel-pestana activo" style="--color-borde: var(--fucsia);">
                     <div class="panel-icono" style="color: var(--fucsia);"><i class="fas fa-child"></i></div>
                     <h3>Psicología Infantil</h3>
-                    <div class="badges-modalidad"><span class="badge badge-presencial">Presencial</span></div>
-                    <p>Acompañamos a tus pequeños en su desarrollo emocional y social. Utilizamos el juego, los colores y la creatividad en nuestros espacios físicos para brindarles herramientas prácticas que les permitan manejar la ansiedad y fortalecer su autoestima.</p>
-                    <!-- NUEVO BOTÓN -->
-                    <a href="./servicios/psicologia-infantil.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <div class="badges-modalidad">
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial Urubamba</span>
+                    </div>
+                    <p>Acompañamos a tus pequeños en su desarrollo emocional y social. Utilizamos el juego, los colores y la creatividad en nuestros espacios físicos para brindarles herramientas prácticas que les permitan manejar la ansiedad, superar miedos y fortalecer su autoestima.</p>
+                    <a href="./servicios/psicologia-infantil.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Adolescentes -->
@@ -142,11 +246,13 @@
                     <div class="panel-icono" style="color: var(--turquesa);"><i class="fas fa-users"></i></div>
                     <h3>Psicología para Adolescentes</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
-                        <span class="badge badge-virtual">Virtual</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial</span>
+                        <span class="badge badge-virtual"><i class="fas fa-video"></i> Virtual Online</span>
                     </div>
-                    <p>Apoyo especializado para transitar los cambios de esta etapa. Creamos un espacio de escucha activa (en consultorio o videollamada) donde fortalecemos la identidad, la autoconfianza y la gestión sana de emociones y relaciones interpersonales.</p>
-                    <a href="./servicios/psicologia-adolescentes.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Apoyo especializado para transitar los cambios de esta etapa vital. Creamos un espacio de escucha activa (en consultorio o videollamada) donde fortalecemos la identidad, la autoconfianza y la gestión sana de emociones y relaciones interpersonales.</p>
+                    <a href="./servicios/psicologia-adolescentes.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Adultos -->
@@ -154,11 +260,13 @@
                     <div class="panel-icono" style="color: var(--terracota);"><i class="fas fa-user"></i></div>
                     <h3>Psicología para Adultos</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
-                        <span class="badge badge-virtual">Virtual</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial</span>
+                        <span class="badge badge-virtual"><i class="fas fa-video"></i> Virtual Online</span>
                     </div>
-                    <p>Un espacio seguro y libre de juicios para abordar el estrés, la ansiedad o conflictos personales. Promovemos el bienestar integral y el autoconocimiento adaptándonos a tus horarios mediante sesiones presenciales u online.</p>
-                    <a href="./servicios/psicologia-adultos.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Un espacio seguro, confidencial y libre de juicios para abordar el estrés, la ansiedad, crisis vitales o conflictos personales. Promovemos el bienestar integral y el autoconocimiento adaptándonos a tus horarios.</p>
+                    <a href="./servicios/psicologia-adultos.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Aprendizaje -->
@@ -166,11 +274,13 @@
                     <div class="panel-icono" style="color: var(--mostaza);"><i class="fas fa-book-reader"></i></div>
                     <h3>Terapia de Aprendizaje</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
-                        <span class="badge badge-virtual">Virtual</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial</span>
+                        <span class="badge badge-virtual"><i class="fas fa-video"></i> Virtual Online</span>
                     </div>
-                    <p>Diseñamos estrategias dinámicas para superar dificultades escolares. Potenciamos las habilidades de cada persona respetando su ritmo único, con materiales interactivos en nuestras instalaciones o herramientas digitales a distancia.</p>
-                    <a href="./servicios/terapia-aprendizaje.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Diseñamos estrategias dinámicas para superar dificultades escolares (dislexia, concentración, hábitos de estudio). Potenciamos las habilidades de cada persona respetando su ritmo único de desarrollo.</p>
+                    <a href="./servicios/terapia-aprendizaje.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Lenguaje -->
@@ -178,11 +288,13 @@
                     <div class="panel-icono" style="color: var(--fucsia);"><i class="fas fa-comments"></i></div>
                     <h3>Terapia de Lenguaje</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
-                        <span class="badge badge-virtual">Virtual</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial</span>
+                        <span class="badge badge-virtual"><i class="fas fa-video"></i> Virtual Online</span>
                     </div>
-                    <p>Evaluación y tratamiento lúdico para dificultades de comunicación y expresión. Trabajamos con ejercicios especializados y seguimiento remoto o presencial para que la voz de cada paciente logre florecer.</p>
-                    <a href="./servicios/terapia-lenguaje.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Evaluación y tratamiento lúdico para dificultades de comunicación, pronunciación y expresión oral. Trabajamos con ejercicios especializados y seguimiento cercano para que la voz de cada paciente logre florecer.</p>
+                    <a href="./servicios/terapia-lenguaje.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Arte -->
@@ -190,10 +302,12 @@
                     <div class="panel-icono" style="color: var(--turquesa);"><i class="fas fa-palette"></i></div>
                     <h3>Arteterapia</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial Urubamba</span>
                     </div>
-                    <p>Conectamos con la creatividad utilizando colores, texturas y formas en nuestro centro para facilitar la expresión emocional profunda. Ideal para resolver conflictos internos sin necesidad de utilizar palabras.</p>
-                    <a href="./servicios/arteterapia.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Conectamos con la creatividad utilizando colores, texturas y formas para facilitar la expresión emocional profunda. Es una vía poderosa para desbloquear tensiones y procesar vivencias sin necesidad de palabras.</p>
+                    <a href="./servicios/arteterapia.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
                 
                 <!-- Contenido Neuropsicología -->
@@ -201,69 +315,99 @@
                     <div class="panel-icono" style="color: var(--terracota);"><i class="fas fa-brain"></i></div>
                     <h3>Neuropsicología</h3>
                     <div class="badges-modalidad">
-                        <span class="badge badge-presencial">Presencial</span>
+                        <span class="badge badge-presencial"><i class="fas fa-building"></i> Presencial Urubamba</span>
                     </div>
-                    <p>Evaluación especializada y estimulación de funciones cognitivas clave como la memoria y la atención. Buscamos optimizar el rendimiento cerebral mediante pruebas clínicas estructuradas presenciales.</p>
-                    <a href="./servicios/neuropsicologia.html" class="btn-secundario">Ver Servicio Completo</a>
+                    <p>Evaluación especializada y estimulación de funciones cognitivas clave como la memoria, la atención y las funciones ejecutivas. Diseñamos planes terapéuticos estructurados para optimizar el rendimiento global.</p>
+                    <a href="./servicios/neuropsicologia.html" class="btn-secundario">
+                        Conocer Más y Agendar <i class="fas fa-arrow-right" style="font-size: 0.85rem; margin-left: 4px;"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección del Mapa de Ubicación -->
+    <!-- Sección de Ubicación & Contacto -->
     <section class="seccion-mapa" id="ubicacion">
         <div class="contenedor-mapa">
-            <h2>Visítanos en Urubamba</h2>
-            <p>Nos encontramos en el corazón del Valle Sagrado. ¡Te esperamos con los brazos abiertos!</p>
-            
-            <div class="mapa-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.532356399676!2d-72.12879555!3d-13.3009715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d860e326b27d1%3A0x6b8030bb4d1c4484!2sUrubamba!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación en Urubamba"></iframe>
+            <div class="seccion-titulo-centro" style="margin-bottom: 20px;">
+                <span class="tag-subtitulo">Ubicación y Consultorio</span>
+                <h2>Visítanos en Urubamba</h2>
+                <p>Nos encontramos en el corazón del Valle Sagrado. ¡Te esperamos con un espacio cómodo y seguro!</p>
             </div>
+            
+            <div class="mapa-grid">
+                <div class="mapa-info">
+                    <h3>Centro de Terapias T'ikay</h3>
+                    <p>Un espacio acogedor diseñado especialmente para la tranquilidad de niños, jóvenes y familias.</p>
+                    
+                    <ul class="lista-detalles-ubicacion">
+                        <li>
+                            <i class="fas fa-map-pin"></i>
+                            <div><strong>Dirección:</strong> Urubamba, Valle Sagrado, Cusco, Perú.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div><strong>Horarios de Atención:</strong> Lunes a Sábado con cita previa.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-video"></i>
+                            <div><strong>Modalidad Online:</strong> Plataforma privada y segura para todo el Perú y el extranjero.</div>
+                        </li>
+                    </ul>
 
-            <!-- ENLACE DE GOOGLE MAPS CORREGIDO: Búsqueda segura -->
-            <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="btn-principal btn-mapa">
-                <i class="fas fa-map-marked-alt"></i> Abrir en Google Maps
-            </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="btn-principal btn-mapa">
+                        <i class="fas fa-map-marked-alt"></i> Ver en Google Maps
+                    </a>
+                </div>
+
+                <div class="mapa-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15535.532356399676!2d-72.12879555!3d-13.3009715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d860e326b27d1%3A0x6b8030bb4d1c4484!2sUrubamba!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación en Urubamba"></iframe>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Profesional -->
     <footer id="contacto">
         <div class="footer-container">
-            <div class="footer-col">
-                <div class="brand-footer">
-                    <h4>T'IKAY</h4>
-                </div>
-                <p>Centro de Terapias y Psicología online y presencial en el Valle Sagrado. Cuidamos el bienestar emocional de tu familia.</p>
+            <div class="footer-col brand-footer">
+                <h4>T'IKAY</h4>
+                <p>Centro de Psicología y Terapias Integrales. Sembrando confianza y florecimiento emocional para niños, adolescentes y adultos en el Valle Sagrado y el mundo.</p>
+                <p style="font-size: 0.85rem; opacity: 0.75;"><i class="fas fa-shield-heart" style="color: var(--mostaza); margin-right: 5px;"></i> Confidencialidad y ética profesional garantizadas.</p>
             </div>
+
             <div class="footer-col">
                 <h4>Contáctanos</h4>
                 <ul>
-                    <li><i class="fab fa-whatsapp"></i> +51 992204470</li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/51992204470" target="_blank" rel="noopener noreferrer" class="link-footer">+51 992 204 470</a></li>
                     <li><i class="fas fa-envelope"></i> hola@centrotikay.com</li>
-                    <li><a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer"><i class="fas fa-map-marker-alt"></i> Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Urubamba,+Cusco,+Peru" target="_blank" rel="noopener noreferrer" class="link-footer">Urubamba, Cusco, Perú</a></li>
+                    <li><i class="fas fa-globe"></i> Atención Presencial y Virtual</li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Síguenos</h4>
-                <div class="redes-sociales">
+                <h4>Conéctate con Nosotros</h4>
+                <p>Síguenos en redes sociales para ver consejos prácticos sobre crianza respetuosa, salud emocional y aprendizaje.</p>
+                <div class="redes-sociales" style="margin-top: 15px;">
                     <a href="https://www.instagram.com/tikay.centro/" target="_blank" rel="noopener noreferrer" class="ig-link">
                         <i class="fab fa-instagram"></i> @tikay.centro
                     </a>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Centro de Terapia T'ikay. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Centro de Terapias T'ikay. Todos los derechos reservados. Urubamba, Valle Sagrado - Cusco.</p>
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+    <!-- Botón Flotante de WhatsApp con Onda de Pulso -->
+    <a href="https://wa.me/51992204470?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20presenciales%20y%20virtuales." class="btn-flotante-wa" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-<!-- Llamada al Script Modular -->
+    <!-- Script Modular -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
